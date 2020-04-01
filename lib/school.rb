@@ -1,6 +1,7 @@
 require 'pry'
 # code here!
 class School
+  attr_accessor :student, :roster
   def initialize(name)
     @name = name
     @roster = Hash.new
@@ -8,17 +9,13 @@ class School
 #  def name=(name)
 #    @name = name
 #  end
-    def roster
-    @roster
-     end
+    #def roster
+    #@roster
+     #end
 
   def add_student(name, grade)
-    if @roster[grade]
+    @roster[grade] ||= [ ]
         @roster[grade] << name
-       else
-        @roster[grade] = Array.new
-    @roster[grade] << name
-    end
   end
 
   def grade(grade)
@@ -27,11 +24,12 @@ class School
   end
 
   def sort
+    sort_students= { }
     roster.each do |grade, students|
          #binding.pry
-    grade = students.sort
+   sort_students[grade] = students.sort
       end
-     roster.sort
+      sort_students
   end
 
 end
