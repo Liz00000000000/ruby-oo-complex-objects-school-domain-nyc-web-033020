@@ -28,6 +28,7 @@ class School
          #binding.pry
    sort_students[grade] = students.sort
       end
+      sort 
   end
 
 end
