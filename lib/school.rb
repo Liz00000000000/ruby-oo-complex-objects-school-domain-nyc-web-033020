@@ -1,35 +1,37 @@
-#binding.pry
+require 'pry'
 # code here!
 class School
   def initialize(name)
     @name = name
-    @roster = roster
+    @roster = Hash.new
   end
 #  def name=(name)
 #    @name = name
 #  end
     def roster
-    @roster = { }
+    @roster
      end
 
   def add_student(name, grade)
-    if @roster[grade] 
+    if @roster[grade]
         @roster[grade] << name
-    else
-    @roster[grade] = [name]
+       else
+        @roster[grade] = Array.new
+    @roster[grade] << name
     end
   end
 
   def grade(grade)
-    puts @roster[grade]
+     @roster[grade]
+      #  binding.pry
   end
 
   def sort
-    roster.each do |grade, student|
-      student.map do |name|
-        name
+    roster.each do |grade, students|
+         #binding.pry
+    grade = students.sort
       end
-    end.sort
+     roster.sort
   end
 
 end
