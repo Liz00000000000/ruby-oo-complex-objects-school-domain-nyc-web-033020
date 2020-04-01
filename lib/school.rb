@@ -1,5 +1,6 @@
 require 'pry'
 # code here!
+attr_accessor :student, :roster 
 class School
   def initialize(name)
     @name = name
