@@ -1,7 +1,7 @@
 require 'pry'
 # code here!
-attr_accessor :student, :roster
 class School
+  attr_accessor :student, :roster
   def initialize(name)
     @name = name
     @roster = Hash.new
