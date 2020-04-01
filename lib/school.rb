@@ -14,12 +14,8 @@ class School
 
   def add_student(name, grade)
 
-    if @roster[grade] = [ ]
+    @roster[grade] = [ ] 
         @roster[grade] << name
-       else
-        @roster[grade] = Array.new
-    @roster[grade] << name
-    end
   end
 
   def grade(grade)
