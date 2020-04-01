@@ -30,7 +30,7 @@ class School
     sort_students = { }
     roster.each do |grade, students|
          #binding.pry
-    grade = students.sort
+   sort_students = student.sort 
       end
      roster.sort
   end
